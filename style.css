@@ -1,0 +1,56 @@
+body {
+    background-image: linear-gradient(to top, #99d2b2 0%, #fef9d7 100%);
+        background-size: 1000% 1000%; 
+        background-repeat: no-repeat;
+    }
+    
+    .container {
+        margin : auto;
+        width : 80%;
+      position: relative;  
+      display: flex;
+    }
+    
+    #canard1 {
+      position: relative;
+      width: 20%;
+      height:10%;
+      
+      top: 50%;
+      left: 50%;
+      transition: all 0.8s ease-in-out;
+    }
+    
+    #canard1 img {
+      width: 100%; 
+      z-index:99;
+    }
+    
+    #canard1:hover {
+      cursor: pointer;
+    }
+    
+    .toRight  { 
+      transform: scaleX(-1);
+    }
+    
+    .toLeft  { 
+     
+    }
+    
+    #coin {
+      font-family: "Courier new";
+      font-size: 10px;
+      color:black;
+      position: absolute;
+      z-index:1;
+      top:50px;
+      left:600px;
+      display:none;
+      
+      
+    }
+     
+    #boutons {
+      display: none;
+    }
