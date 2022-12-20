@@ -1,34 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset='utf-8'>
-    <title> Poke the Duck </title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Water Eddie the plant</title> 
     <link rel='stylesheet' href="style.css">
     <script src='main.js'></script>
 </head>
 <body>
-    <div class="container">
-    <div id="canard1" onclick="coin()"><img src="resources/Canardrepos4.gif" alt="canard" id="canard1img" onclick="leftOrRight()"></div>
-  
-  </div>
-    <div id="coin">coin</div>
     
-	<div id="flipme">Flip me or read on a wider screen for best duckling experience</div>
-    
-    
-    <div id="boutons">
-        <button onclick="droite()">A droite</button>
-    <button onclick="gauche()">A gauche</button>
-      <button onclick="coin()">COin</button></div>
+    <body onload="thirstGenerator()" id="body" class="bg1">
+        <div class="container">
+          <img src="resources/Plante1.png" id="myPlant" alt="my plant" width="300px">
+          <br/>
+          <h1 id="intro">Hi there! I am Eddie the plant, water me if you like :)</h1>
+          <h2>My thirst level : <span id="thirst"></span> - 
+            <span id="output"></span></h2>
+          <button onclick="myFunction()" id="btn">Water the plant</button>
+        </div>
+        </div>
+        </body>
 
-
-<script>
-canard1.addEventListener('mouseover', canardHover); 
-    canard1.addEventListener('mouseleave', imgHover2); </script>
-  </body>
-  
-  
-  
-  
+</body>
 </html>

@@ -1,75 +1,45 @@
-/* Change canard img when hover */
-function canardHover() {
-    canard1img.src = 'resources/Meh2.png';
-}
+let thirstlevel = Math.floor((Math.random() * 21) + 5);
 
-function imgHover2() {
-    canard1img.src = 'resources/Canardrepos4.gif';
-}
-
-
-
-/* Quack sounds */
-function playAudio() {
-  new Audio('resources/quack.mp3').play();
-}
-
-/* Coin coin */
-
-
-function coin() {
-    new Audio('resources/quack.mp3').play();
-    let y = document.getElementById("coin").offsetLeft;
-    let z = document.getElementById("coin").offsetTop;
-       document.getElementById('coin').style.display = ('block');
-  y = 50;
-  y = (Math.random() * 600) + y;
-document.getElementById('coin').style.left = (y + 'px');
-  z =50;
-   z = (Math.random() * 200) + z;
-document.getElementById('coin').style.top = (z + 'px');
-
-}
-
-
-/* Move the duck */
-/* Clic = il va soit à gauche, soit à droite */
-
-
-function leftOrRight() {
-    canard1img.src = 'resources/Duckwalk4.gif';
-    let x = document.getElementById("canard1").offsetLeft;
-var step = ((Math.random() * 501)+100);
-  if(canard1img.classList.contains("toRight")) {   
-     document.getElementById('canard1img').classList = ('toLeft');
-    x= x - step;
-document.getElementById('canard1').style.left= x + "px";} 
+// Generate a random number for the thirst level and display it //
+function thirstGenerator() {
   
-  else {
-  document.getElementById('canard1img').classList=('toRight');
-    x= x + step;
-document.getElementById('canard1').style.left= x + "px";} 
+  document.getElementById('thirst').innerHTML = thirstlevel;
+  if (thirstlevel < 50) {
+    document.getElementById('output').innerHTML = "I am thirsty !";
+  }
+   else {
+     document.getElementById('output').innerHTML = "I am good !";
+  }
+  
+};
+
+// Water the plant: button = thirstlevel + 10.//
+// Change the image if too watery + message + change color //
+function myFunction() {
+  thirstlevel += 10;
+  document.getElementById('thirst').innerHTML = thirstlevel;
+  if (thirstlevel > 70) {
+    document.getElementById('myPlant').src = 'resources/Plante4.png';
+    document.getElementById('output').innerHTML = "AaAaaAargh whyYyYyy";
+    document.getElementById('thirst').style.color = "var(--red)";
+    document.getElementById('output').style.color = "var(--red)";
+    document.getElementById('intro').style.display = "none";
+    document.getElementById('body').className = "bg2"; 
+    
   }
 
+   
+  else if (thirstlevel > 50) {
+   document.getElementById('output').innerHTML = "Moooore !"; document.getElementById('myPlant').src="resources/Plante3.png";
+  }
 
+  else if (thirstlevel > 30) {
+    document.getElementById('output').innerHTML = "Moooore !"; document.getElementById('myPlant').src="resources/Plante2.png";
+   }
 
-/* OLD */
-
-function droite() {
-  document.getElementById('canard1img').classList.add('toRight');
-  if(canard1img.classList.contains("toRight") && (x < 500)) {   x= x + step;
-document.getElementById('canard1').style.left= x + "px";}
-
+   else if (thirstlevel <= 30) {
+    document.getElementById('output').innerHTML = "Moooore !"; document.getElementById('myPlant').src="resources/Plante1.png";
+   }
+  
 }
 
-/* Aller à gauche */
-
-function gauche() {
-  
- document.getElementById('canard1img').classList=("toLeft");
- if(x>0){
-   x= x - step;
-document.getElementById('canard1').style.left= x + "px"; 
- }
-}
-  
