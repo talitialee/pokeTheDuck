@@ -1,25 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Water Eddie the plant</title> 
+<head>
+    <meta charset='utf-8'>
+    <title> Poke the Duck </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' href="style.css">
     <script src='main.js'></script>
 </head>
 <body>
+  <header>
+    <div class="reload" onclick="reload()"><img src="resources/reloadblack.svg" alt="Reload the page"></div>
+    <h1>Poke the duck!</h1>
+  </header>
+
+
+
+  <div class="container" id="duckContainer">
+    <div id="canard1">
+      <img src="resources/Canardrepos4.gif" alt="canard" id="canard1img" onclick="playAudio(); coin(); leftOrRight(); ">
+    </div>
+  </div>
+
+  <div id="coin">coin</div>
     
-    <body onload="thirstGenerator()" id="body" class="bg1">
-        <div class="container">
-          <img src="resources/Plante1.png" id="myPlant" alt="my plant" width="300px">
-          <br/>
-          <h1 id="intro">Hi there! I am Eddie the plant, water me if you like :)</h1>
-          <h2>My thirst level : <span id="thirst"></span> - 
-            <span id="output"></span></h2>
-          <button onclick="myFunction()" id="btn">Water the plant</button>
-        </div>
-        </div>
-        </body>
+  <div class="flipScreenWarning"><h2>Flip screen for better poking experience</h2></div>
+
+      
+<footer>
+  <h2>Website & illustrations by <a href="https://alice-reuter.myportfolio.com/" alt="Alice Reuter's portfolio" target="_blanck">Alice Reuter</a></h2>
+</footer>
+
+
+<script>
+  canard1.addEventListener('mouseover', canardHover); 
+  canard1.addEventListener('mouseleave', imgHover2); 
+</script>
 
 </body>
+  
+  
+  
+  
 </html>
